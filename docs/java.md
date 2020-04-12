@@ -340,7 +340,7 @@ Runtime Exception : 非受查异常
 
 
 
-![java并发编程](E:\idea-workspace\note\src\main\resources\md笔记\attached-picture\thread.png)
+![java并发编程](G:\workspace-git\note\docs\attached-picture\thread.png)
 
 ### 14.1 线程
 
@@ -476,7 +476,7 @@ Runtime Exception : 非受查异常
 
 ### ThreadLocal
 
-![ThreadLocal.uml](C:\Users\admin\Desktop\学习笔记\md笔记\attached-picture\ThreadLocal.png)
+![ThreadLocal.uml](G:\workspace-git\note\docs\attached-picture\ThreadLocal.png)
 
 线程结束，ThreadLocal也会被回收，所以可以不用考虑remove的事情。例外就是使用线程组，线程始终存活，ThreadLocal不会主动释放引用，需要手动释放，避免内存溢出！
 
