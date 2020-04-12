@@ -13,4 +13,5 @@
 * 中间件
 
   * [RocketMQ](./docs/middleware/RocketMQ.md "RocketMQ world")
+  * [Redis](./docs/middleware/Redis.md "Redis world")
 

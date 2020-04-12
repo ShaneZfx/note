@@ -11,6 +11,9 @@
 
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="theme-custom.css">
+
+  <!-- 评论 -->
+  <link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
 </head>
 
 <body>
@@ -27,23 +30,25 @@
       repo: 'https://github.com/ShaneZfx/note.git',
       loadSidebar: true,
       loadSidebar: 'summary.md',
-      loadNavbar: false,
-      //loadNavbar: 'navigation.md',
+      coverpage: true,
+      coverpage: 'cover.md',
+      onlyCover: false,
+      autoHeader: true,
+      mergeNavbar: true,
+      formatUpdated: '{YYYY}-{MM}-{dd} {HH}:{mm}:{ss}',
+      formatUpdated: function(time) {
+        return time;
+      },
       subMaxLevel: 3,
       auto2top: true,
-      coverpage: false,
       mergeNavbar: true,
       search: {
-        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
         paths: 'auto',
-        placeholder: '搜索',
-        noData: '找不到结果',
-        depth: 3
+        placeholder: '挖矿',
+        noData: '稀缺资源',
+        maxAge: 86400000,
+        depth: 6
       }
-      /*plugins: [
-        // 配置对应的GitHub跳转页面
-        EditOnGithubPlugin.create('https://github.com/ShaneZfx/note.git')
-      ]*/
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
@@ -61,20 +66,25 @@
   <script src="//unpkg.com/docsify-copy-code"></script>
   <!-- 图片缩放插件 -->
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-  <!-- 字数统计插件 -->
-  <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
-  <!-- 评论系统 -->
-  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
   <script>
   	const gitalk = new Gitalk({
-	    clientID: 'Github Application Client ID',
-	    clientSecret: 'Github Application Client Secret',
-	    repo: 'Github repo',
-	    owner: 'Github repo owner',
-	    admin: ['Github repo collaborators, only these guys can initialize github issues'],
+	    clientID: 'd4443fbfde39ba2afe0e',
+	    clientSecret: '0a58f1ba3179ce930b98dcbec737704f4cabd7d7',
+	    repo: 'https://github.com/ShaneZfx/note.git',
+	    owner: 'ShaneZfx',
+	    admin: ['ShaneZfx'],
 	    // facebook-like distraction free mode
-	    distractionFreeMode: false
+	    distractionFreeMode: true,
+      title: location.hash.match(/#(.*?)([?]|$)/)[1],
+      id: location.hash.match(/#(.*?)([?]|$)/)[1]
 	  })
+    window.onhashchange = function(event){
+      if(event.newURL.split('?')[0] !== event.oldURL .split('?')[0]) {
+        location.reload()
+      }
+    }
   </script>
   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
 </body>
