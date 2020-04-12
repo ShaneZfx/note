@@ -6,26 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- 主题样式 -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"> -->
+
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="theme-custom.css">
 </head>
+
 <body>
   <div id="app"></div>
-  <div data-app id="main">Please wait...</div>
   <nav>
     <a href="#/">EN</a>
     <a href="#/zh-cn/">中文</a>
   </nav>
   <div id="app"></div>
+  <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
   <script>
     window.$docsify = {
       name: 'doclib',
       repo: 'https://github.com/ShaneZfx/note.git',
-      el: '#main',
       loadSidebar: true,
+      loadSidebar: 'summary.md',
+      loadNavbar: false,
+      //loadNavbar: 'navigation.md',
       subMaxLevel: 3,
-      loadNavbar: true,
       auto2top: true,
-      coverpage: true,
+      coverpage: false,
       mergeNavbar: true,
       search: {
         maxAge: 86400000, // 过期时间，单位毫秒，默认一天
@@ -33,12 +39,11 @@
         placeholder: '搜索',
         noData: '找不到结果',
         depth: 3
-      },
-      plugins: [
+      }
+      /*plugins: [
         // 配置对应的GitHub跳转页面
         EditOnGithubPlugin.create('https://github.com/ShaneZfx/note.git')
-      ],
-      disqus: 'shortname'
+      ]*/
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
@@ -57,7 +62,7 @@
   <!-- 图片缩放插件 -->
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
   <!-- 字数统计插件 -->
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!-- <script src="//unpkg.com/docsify-count/dist/countable.js"></script> -->
   <!-- 评论系统 -->
   <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
   <script>
@@ -71,5 +76,6 @@
 	    distractionFreeMode: false
 	  })
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
 </body>
 </html>
