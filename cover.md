@@ -1,4 +1,4 @@
-#	  <span> **doc lib** <small>shane</small></span>
+#	  <span> **doc-lib** <small>shane</small></span>
 
 > 来自一位不知姓名的大收藏家，希望会有你们喜欢的东西
 
