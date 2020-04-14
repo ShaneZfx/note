@@ -1,6 +1,6 @@
 # RocketMQ
 
-## 1.问题
+## 问题
 
 1. 消息队列是什么
 2. 消息队列的作用
@@ -12,9 +12,9 @@
 8. ExecutorService框架
 9. CountDownLatch
 
-## 2.模块
+## 模块
 
-### 2.1 NameServer
+### 1. NameServer
 
 1. `NameServer`启动
 
@@ -50,13 +50,13 @@
    >
    > 
 
-#### 2.1.1 设计架构
+#### 1.1 设计架构
 
-#### 2.1.2 对比zk
+#### 1.2 对比zk
 
-### 2.2 client
+### 2 client
 
-#### 2.2.1 发送者
+#### 2.1 发送者
 
 > RocketMQ 消息发送的三种方式
 >
