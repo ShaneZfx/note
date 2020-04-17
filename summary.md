@@ -1,5 +1,6 @@
 * 计算机基础
   * [Linux](./docs/basis/Linux.md "Linux world")
+  * [数据结构与算法](./docs/basis/Algorithms&DataStructure.md"Algorithms&DataStructure")
 
 * 计算机网络
 
