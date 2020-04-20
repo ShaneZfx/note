@@ -11,6 +11,7 @@
 7. **大量的final关键字的使用**，在局部变量内的使用，以及成员变量的使用
 8. ExecutorService框架
 9. CountDownLatch
+10. producer向topic推消息，是否是向每个队列都插入消息
 
 ## 模块
 
